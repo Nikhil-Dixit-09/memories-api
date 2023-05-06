@@ -4,6 +4,8 @@ const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 const cors=require('cors');
 const port=8000;
+const dotenv=require('dotenv');
+dotenv.config();
 const router=require('./routes/index.js');
 const app=express();
 app.use(bodyParser.json({limit: "30mb",extended: true}));
