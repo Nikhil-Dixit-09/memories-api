@@ -3,8 +3,10 @@ const PostMessage=require('../models/postMessage');
 //gfcxfhdcfhc
 module.exports.forward=async function (req,res){
     try{
+        console.log('hiii');
         const postMessages=await PostMessage.find();
         // console.log('hi',postMessages);
+        
         return res.status(200).json(postMessages);
     }catch(err){
         return res.status(404).json({message: err.message});
